@@ -1,0 +1,42 @@
+$nuber1:10px;
+$number2:20px;
+$primary-color:green;
+@mixin size {
+ width: 200px;
+ height: 200px;
+ display: block; 
+ margin-bottom: 20px;   
+}
+@function namravli( $number1, $number2){
+    @return ($number1 * $number2) }
+    .task1{
+        @include size;
+        background-color: red;
+        p{
+            font-size: namravli;
+        }
+    }
+    @function bcground($primary-color){
+        @if ($primary-color > 10) {
+            @return red;
+        }
+        @else{
+            @return yellow;
+        }
+    }
+    .task2{
+        @include size;
+        background-color: bckground(11);
+    }
+    @function bground($primary-color){
+        @if ($primary-color ==witeli) {
+            @return red;
+        }
+        @else{
+            @return yellow;
+        }
+    }
+    .task3{
+        @include size;
+        background-color: bground(witeli);
+    }
